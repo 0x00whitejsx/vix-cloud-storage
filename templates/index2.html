@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+   
+
+
+
+ <nav class="flex w-full justify-between p-2 place-items-center">
+    <div class="flex justify-center items-center align-center gap-2">
+    <img src="../static/asset/upload_image.svg" alt="logo">
+    <h7 class="font-extrabold ">Vix <span>Cloud</span></h7>
+    </div>
+    <div class="flex gap-4 justify-center align-center place-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+          </svg>
+       <a href="">Developer</a>
+       <a href="">Intergration</a>
+    
+    <a href="/register">
+    <button class="bg-blue-600 rounded-sm border-none text-white  p-2 hover:ring-3 pointer  cursor-pointer">Create account</button>
+
+</a>
+</div>
+ </nav>
+ <div class="md:m-20 md:p-10">
+ <div class="w-full flex md:flex-row justify-center flex-wrap">
+    <div class="md:w-3/12 w-full">
+        {% if signupSuccess != '' %}
+        <div class="bg-indigo-900 text-center py-4 lg:px-4">
+            <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+              <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Success</span>
+              <span class="font-sm mr-2 text-left flex-auto">{{ signupSuccess }}</span>
+              <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+            </div>
+          </div>
+        {% endif %}
+        {% if error != '' %}
+        <div class="bg-indigo-900 text-center py-4 lg:px-4">
+            <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+              <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Error</span>
+              <span class="font-semibold mr-2 text-left flex-auto">{{ error }}</span>
+              <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+            </div>
+          </div>
+        {% endif %}
+        <form action="/checkeing_login" method="post">
+        <div class="w-full  bg-white rounded-sm  p-7">
+                    <p class="text-[#333333] p-1"> Login to your account<p>
+                    <input type="email" name="email" id="email" placeholder="Email address" class="outline outline-slate-200 outline-offset-2 outline-1 mt-4 mb-3 w-full p-2 hover:ring-offset-1 hover:ring-1">
+                    <input type="password" name="password" id="password" placeholder="Password" class="outline outline-slate-200 outline-offset-2 outline-1 mt-1 mb-3 w-full p-2 hover:ring-offset-1 hover:ring-1 ">
+                    <button class="bg-blue-600 rounded-sm text-white  w-full  p-2 hover:ring-3 mt-1 mb-4  hover:bg-blue-700 pointer hover:text-blue-50 cursor-pointer">Login</button>
+                    <a href="./forgot_password" class="mt-7  cursor-pointer">forgot password?</a>
+                </form>
+        </div>
+    </div>
+    
+
+
+ {% endblock %}
+ </div>

@@ -1,0 +1,11 @@
+body {
+    background: url('../asset/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+}
+li{
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 1px;
+}

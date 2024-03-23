@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}{% endblock %} - Vix Cloud Storage</title>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+    
+
+
+
+
+        {% block footer %}
+        <div class="absolute bottom-0 right-0 flex justify-between gap-4 p-3 content-baseline text-[14px] text-slate-700">
+            <p class="">Vix Cloud Technology Solutions Limited -  Open source software  &ccirc;2024</p>
+            <p class=""> <a href="">Privacy policy </a>| <a href="">  Terms and conditions</a></p>
+            <div class="bg-blue-700  rounded-sm text-white hover:bg-blue-900 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                  </svg>
+            </div>
+         </div>
+        {% endblock %}
+
+        <div class="md:w-8/12 flex justify-center align-center md:mt-7">
+            <!-- <img src="./asset/homepage-app-shapes-bg.png" alt=""> -->
+            <div class="flex justify-center flex-col">
+                <div class="flex gap-2 mb-3 text-blue-400 content-baseline place-items-center">
+                    <img src="../static/asset/ProtectFilesLight.svg" alt="protecct">
+                    
+                      <h1 class=" leading-8 text-xl">Secure Cloud Storage Services Safeguarding Your Data Assets</h1>                 
+                </div>
+    
+    
+                <div class="flex gap-2 mb-3 text-blue-400 place-items-center">
+                    <img src="../static/asset/SharedContentLight.svg" alt="">
+                      
+                    <h1 class=" leading-8 text-xl">Efficient Cloud Storage Solutions for Seamless Data Management</h1>                 
+                </div>
+    
+                <div class="flex gap-2 mb-3 text-blue-400 place-items-center">
+                    <img src="../static/asset/ManageBusinessLight.svg" alt="mgt">                
+                    <h1 class=" leading-8 text-xl">Scalable Cloud Storage Infrastructure for Flexible Business Needs</h1>                  
+                </div>
+    
+    
+    
+            </div>
+          
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+   
+
+ <nav class="flex w-full justify-between p-2">
+    <div class="flex justify-center items-center align-center gap-2">
+    <img src="../static/asset/upload_image.svg" alt="logo">
+    <h7 class="font-extrabold ">Vix <span>Cloud</span></h7>
+    </div>
+    <a href="/">
+    <button class="bg-blue-600 rounded-sm border-none text-white  p-2 hover:ring-3 pointer  cursor-pointer">Already have an account? Login</button>
+</a>
+ </nav>
+ <div class="md:m-20 md:p-10">
+ <div class="w-full flex md:flex-row justify-center flex-wrap">
+    <div class="md:w-3/12 w-full">
+        {% if error != '' %}
+        <div class="bg-indigo-900 text-center py-4 lg:px-4">
+            <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
+              <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">Error</span>
+              <span class="font-semibold mr-2 text-left flex-auto">{{ error }}</span>
+              <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
+            </div>
+          </div>
+        {% endif %}
+        <form action="/handle_registration" method="post">
+        <div class="w-full  bg-white rounded-sm  p-7">
+                    <p class="text-[#333333] p-1"> Start getting with Vix cloud<p>
+                    <input type="email" name="email" id="email" placeholder="Email address" class="outline outline-slate-200 outline-offset-2 outline-1 mt-4 mb-3 w-full p-2 hover:ring-offset-1 hover:ring-1">
+                    <input type="password" name="password" id="password" placeholder="Password" class="outline outline-slate-200 outline-offset-2 outline-1 mt-1 mb-3 w-full p-2 hover:ring-offset-1 hover:ring-1 ">
+                    <input type="password" name="cpassword" id="cpassword" placeholder="Comfirm password" class="outline outline-slate-200 outline-offset-2 outline-1 mt-1 mb-3 w-full p-2 hover:ring-offset-1 hover:ring-1">
+                    <button class="bg-blue-600 rounded-sm text-white  w-full  p-2 hover:ring-3 mt-1 mb-4  hover:bg-blue-700 pointer hover:text-blue-50 cursor-pointer">Signup</button>
+                    <a href="./forgot_password" class="mt-7  cursor-pointer">forgot password?</a>
+                </form>
+        </div>
+    </div>
+    
+
+
+
+
+
+ {% endblock %}
+ </div>
